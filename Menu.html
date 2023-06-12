@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+  <head>
+    <!--link CSS file-->
+    <link rel="stylesheet" href="formatting.css">
+    <!--for screen-size responsiveness-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  
+  <body>
+    <!--navigation bar-->
+    <div class="header"></div>
+    <div class="navbar" aria-label="Navigation Bar">
+        <a href="Home.html">Home</a>
+        <a href="Reservations.html">Make a Reservation</a>
+        <a href="Contact.html">Contact</a>
+        <a href="Hours.html">Hours</a>
+        <a href="Menu.html">Menu</a>
+      </div>
+
+
+<div class="carouselcontainer">
+    <div class="imagecontainer" aria-label="Carousel slideshow of food relating to menu">
+<div class="carousel">
+ <div class="leftIMG"><img class="image" src="carousel/seafoodbasket.jpeg" id="leftIMG"></div>
+<div class="mainIMG"><img class="image mainsrc" src="carousel/rewena.jpeg" id="mainIMG"></div>
+<div class="rightIMG"><img class="image" src="carousel/fishoftheday.jpeg" id="rightIMG"></div>
+
+</div>
+</div>
+
+<div class="carouselbuttons"> 
+<div class="carouselbutton left" onclick="clickleft()"><img class="image" src="carousel/arrow.png" ></div> 
+<div class="carouselbutton right" onclick="clickright()"><img class="image" src="carousel/arrow.png"></div>
+
+
+</div> 
+</div>
+
+
+
+<div class="menu">
+    <div class="menucontainer">
+    <div class="menulist" aria-label="Images of Menu">
+        <div class="menubutton selected" id="appetizers" onclick="changeimage('Photos/appetizers.jpeg')">Appetizers</div>
+        <div class="menubutton"id="main" onclick="changeimage('Photos/main.jpeg')">Mains</div>
+        <div class="menubutton" id="desserts" onclick="changeimage('Photos/desserts.jpeg')">Dessert</div>
+        <div class="menubutton" id="Red" onclick="changeimage('Photos/Red.jpeg')">Red Wine</div>
+        <div class="menubutton" id="white" onclick="changeimage('Photos/white.jpeg')">White Wine</div>
+        <div class="menubutton" id="BeerCider" onclick="changeimage('Photos/BeerCider.jpeg')">Beer & Cider</div>
+        <div class="menubutton" id="Non-alcoholic" onclick="changeimage('Photos/Non-alcoholic.jpeg')">Non-Alcoholic</div>
+
+    </div>
+
+<div class="menuimagecontainer">
+<img src="Photos/appetizers.jpeg" class="menuIMG" id="menuIMG">
+</div>
+</div>
+</div>
+
+
+
+
+
+  </body>
+  <!--Javascript for the image containers-->
+  <script>
+    let current="appetizers"
+    const changeimage=(image)=>{
+        document.getElementById("menuIMG").setAttribute("src",image)
+        document.getElementById(current).classList.remove("selected")
+        document.getElementById(image.split(".")[0]).classList.add("selected")
+        current=image.split(".")[0]
+
+    }
+    const images=["carousel/seafoodbasket.jpeg","carousel/rewena.jpeg", "carousel/fishoftheday.jpeg", "carousel/lambsteak.jpeg","carousel/kapiti.jpeg","carousel/redW.jpeg","carousel/redW2.jpeg","carousel/whiteW.jpeg","carousel/Beer.jpeg","carousel/Beer2.jpeg","carousel/cider.jpeg","carousel/cider2.jpeg","carousel/softdrinks.jpeg","carousel/softdrinks2.jpeg" ]
+    let left = 0
+    let main = 1
+    let right = 2
+
+    const clickleft=()=>{
+        if(left == 0){
+            left = images.length-1
+        }
+        else{
+            left -= 1
+        }
+        if(main == 0){
+            main = images.length-1
+        }
+        else{
+            main -= 1
+        }
+        if(right == 0){
+            right = images.length-1
+        }
+        else{
+            right -= 1
+        }
+        document.getElementById("leftIMG").setAttribute("src", images[left])
+        document.getElementById("mainIMG").setAttribute("src", images[main])
+        document.getElementById("rightIMG").setAttribute("src", images[right])
+    }
+    const clickright=()=>{
+        if(left == images.length-1){
+            left = 0
+            }
+            else { left += 1 
+            }
+
+            if(main == images.length-1){
+            main = 0
+            }
+            else { main += 1 
+            }
+
+            if(right == images.length-1){
+            right = 0
+            }
+            else { right += 1 
+            }
+
+            document.getElementById("leftIMG").setAttribute("src", images[left])
+            document.getElementById("mainIMG").setAttribute("src", images[main])
+            document.getElementById("rightIMG").setAttribute("src", images[right])
+
+        }
+
+  </script>
+</html>

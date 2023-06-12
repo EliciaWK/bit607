@@ -1,0 +1,208 @@
+/*Header image*/
+body{
+    margin: 0;
+}
+.header {
+    padding: 50px;
+    background-image: url("background/border.jpeg");
+    background-attachment: fixed;
+    background-color: #000000;
+    border: 2px solid black;
+  }
+
+
+
+/* Style the top navigation bar */
+.navbar {
+    background-color: #000000;
+    
+  }
+  
+  /* Style the navigation bar links */
+  .navbar a {
+    display: inline-block;
+    color: white; 
+    text-align: center; 
+    padding: 20px 25px; 
+  }
+
+  /* Change color on hover */
+  .navbar a:hover {
+    background-color: #07AD3C; 
+    color: black; 
+  }
+
+/*background*/
+  body  {
+     background-image: url('background/transparentlogo.png');
+     background-repeat: no-repeat;
+     background-attachment: fixed;
+     background-size: 100% 100%;
+     background-position: center;
+     background-color: #8df4ae;
+     
+ }
+
+
+
+/* Transparent textbox for home page*/
+    .transbox {
+    margin: 30px;
+    background-color: #c7f8c3;
+    border: 1px solid black;
+    opacity: 0.6;
+  }
+  
+    .transbox p {
+    margin: 5%;
+    font-weight: bold;
+    font-family: "Copperplate";
+    text-align: center;
+    color: #000000;
+  }
+
+    .transbox h1 {
+    margin: 5%;
+    font-weight: bold;
+    font-family: "Times New Roman";
+    text-align: center;
+    color: #000000;
+  }
+
+  /*Footer with images for home page*/
+.footer{
+ display: flex;
+ width: 100%;
+
+}
+
+.footerIMG{
+
+width: 100%;
+}
+
+.image{
+    width: 100%;
+    height: 100%;
+}
+
+  /*google form for reservations page*/
+  .googleform {
+    text-align: center;
+
+  }
+/*google map for contact page*/
+  .googlemap{
+    margin-top: 50px;
+    text-align: center;
+  }
+/*google calender for hours page*/
+  .googlecal{
+    text-align: center;
+  }
+/*menu page cointaiers for menu images and buttons to navigate*/
+  .menucontainer{
+    width: 100%;
+   margin-top: 50px;
+  }
+
+  .menu{
+    width: 100%;
+  }
+
+  
+    .menuimagecontainer{
+        display: flex;
+        justify-content: center;
+    }
+
+.menuIMG{
+    width:70%;
+}
+  .menulist{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .menubutton{
+    padding: 10px 5px;
+    cursor: pointer;
+    background-color: lightgrey;
+  }
+
+  .selected{
+    background-color: grey;
+  }
+
+.menubutton:hover{
+    background-color: grey;
+}
+/*carousel images for photos of menu items*/
+.carousel{
+    position: relative;
+    height: 50vh;
+    width: 70%;
+}
+
+.leftIMG{
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 60%;
+    width: 40%;
+
+}
+
+.mainIMG{
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    height: 70%;
+    z-index: 2;
+    width: 40%;
+
+}
+
+.rightIMG{
+    position: absolute;
+    right: 0;
+    top: 0;
+    height: 60%;
+    width: 40%;
+
+}
+
+.mainsrc{
+    transform: translateX(-50%);
+}
+
+.carouselcontainer{
+    padding: 50px;
+}
+
+.carouselbutton{
+cursor: pointer;
+width: 50px;
+margin: 10px 40px;
+}
+
+.carouselbuttons{
+    display: flex;
+    justify-content: center;
+
+}
+
+.right{
+transform: scaleX(-1);
+}
+
+.imagecontainer{
+    display: flex;
+    justify-content: center;
+}
+/*for screen-size responsiveness*/
+@media screen and (max-width: 680px) {
+    .carousel { width: 100%; height: 25vh; }
+
+}
