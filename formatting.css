@@ -4,7 +4,7 @@ body{
 }
 .header {
     padding: 50px;
-    background-image: url("background/border.jpeg");
+    background-image: url("Background/border.jpeg");
     background-attachment: fixed;
     background-color: #000000;
     border: 2px solid black;
@@ -34,7 +34,7 @@ body{
 
 /*background*/
   body  {
-     background-image: url('background/transparentlogo.png');
+     background-image: url('Background/transparentlogo.png');
      background-repeat: no-repeat;
      background-attachment: fixed;
      background-size: 100% 100%;
